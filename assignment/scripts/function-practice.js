@@ -9,24 +9,24 @@ function hello() {
   return 'Hello World!';
 }
 // Call the function to test
-console.log('Test - should say "Hello World!"', hello());
+console.log( 'Test - should say "Hello World!"', hello() );
 
 
 // 2. Function to return an personalized hello, for example 'Hello, Jo!'
-function helloName(name) {
-  console.log('in helloName:', name);
+function helloName( name ) {
+  console.log( 'in helloName:', name );
   return `Hello, ${name}`;
 }
 // Remember to call the function to test
-console.log(helloName('Alex'));
+console.log( helloName('Alex') );
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber ) {
-  console.log( 'in addNumbers:', firstNumber, secondNumber);
+  console.log( 'in addNumbers:', firstNumber, secondNumber );
   let answer = firstNumber + secondNumber;
   return answer;
 }
-console.log(addNumbers(2,3));
+console.log( addNumbers(2,3) );
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree( num0, num1, num2 ){
@@ -34,7 +34,7 @@ function multiplyThree( num0, num1, num2 ){
   let answer = num0 * num1 * num2;
   return answer;
 }
-console.log(multiplyThree(1,2,2));
+console.log( multiplyThree(1,2,2) );
 
 // 5. Function that will return true if a number is positive,
 //    or greater than zero, and false otherwise
@@ -55,16 +55,31 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
-function getLast( array ) {
 
+let favoriteSports=['golf', 'cycling', 'tennis'];
+
+function getLast( array ) {
+  console.log( 'in getLast:', array );
+  let _last_item = array[array.length -1];
+  return _last_item;
 }
+console.log( getLast(favoriteSports) );
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
-function find( value, array ){
-
+function find(array, value){
+  console.log( 'in find:', value, array );
+  for (i=0; i < favoriteSports.length; i++){
+    if ( value === favoriteSports[i] ){
+      return true;
+    } else {
+      return false;
+    }
 }
+}
+
+console.log( find(favoriteSports, 'golf') );
 
 // ----------------------
 // Stretch Goals
