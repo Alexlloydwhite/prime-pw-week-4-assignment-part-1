@@ -13,56 +13,63 @@ console.log('Test - should say "Hello World!"', hello());
 
 
 // 2. Function to return an personalized hello, for example 'Hello, Jo!'
-function helloName( name ) {
-  return;
+function helloName(name) {
+  console.log('in helloName:', name);
+  return `Hello, ${name}`;
 }
 // Remember to call the function to test
-
+console.log(helloName('Alex'));
 
 // 3. Function to add two numbers together & return the result
-function addNumbers( firstNumber ) {
-  // return firstNumber + secondNumber;
+function addNumbers( firstNumber, secondNumber ) {
+  console.log( 'in addNumbers:', firstNumber, secondNumber);
+  let answer = firstNumber + secondNumber;
+  return answer;
 }
-
+console.log(addNumbers(2,3));
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( ){
-
+function multiplyThree( num0, num1, num2 ){
+  console.log( 'in multiplyThree:', num0, num1, num2 );
+  let answer = num0 * num1 * num2;
+  return answer;
 }
+console.log(multiplyThree(1,2,2));
 
-
-// 5. Function that will return true if a number is positive, 
+// 5. Function that will return true if a number is positive,
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
+  console.log( 'in isPositive:', number );
   if ( number > 0 ){
-    return;
+    return true;
+  } else {
+    return false;
   }
-    return;
 }
-// Call the function to test each outcome (true & false) 
+// Call the function to test each outcome (true & false)
 // Write a separate console.log statement for each outcome
 console.log( 'isPositive - should say true', isPositive(3) );
 console.log( 'isPositive - should say false', isPositive(0) );
 console.log( 'isPositive - should say false', isPositive(-3) );
 
 
-// 6. Function to return the _last_ item in an array. If the 
+// 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
 function getLast( array ) {
 
 }
 
-// 7. Function to find a value in an array. Return true if the 
+// 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
-//    DO NOT use Array.includes, Array.indexOf, or Array.find 
+//    DO NOT use Array.includes, Array.indexOf, or Array.find
 function find( value, array ){
-  
+
 }
 
 // ----------------------
 // Stretch Goals
 // ----------------------
-// 8. Function to check if a letter is the first letter in a 
+// 8. Function to check if a letter is the first letter in a
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
 
@@ -83,6 +90,6 @@ function sumAll( ) {
 
 
 
-// 11. Pick a problem from Edabit(https://edabit.com/) or 
-//     CodeWars(https://www.codewars.com/). Then describe it 
+// 11. Pick a problem from Edabit(https://edabit.com/) or
+//     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
