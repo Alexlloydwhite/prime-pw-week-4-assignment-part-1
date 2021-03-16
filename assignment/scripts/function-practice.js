@@ -13,6 +13,8 @@ console.log( 'Test - should say "Hello World!"', hello() );
 
 
 // 2. Function to return an personalized hello, for example 'Hello, Jo!'
+console.log('**** 2. Personalized Hello Function ****')
+
 function helloName( name ) {
   console.log( 'in helloName:', name );
   return `Hello, ${name}`;
@@ -21,6 +23,8 @@ function helloName( name ) {
 console.log( helloName('Alex') );
 
 // 3. Function to add two numbers together & return the result
+console.log('**** 3. Function That Adds 2 Numbers ****')
+
 function addNumbers( firstNumber, secondNumber ) {
   console.log( 'in addNumbers:', firstNumber, secondNumber );
   let answer = firstNumber + secondNumber;
@@ -29,6 +33,8 @@ function addNumbers( firstNumber, secondNumber ) {
 console.log( addNumbers(2,3) );
 
 // 4. Function to multiply three numbers & return the result
+console.log('**** 4. Function That Muliplys Three Numbers ****')
+
 function multiplyThree( num0, num1, num2 ){
   console.log( 'in multiplyThree:', num0, num1, num2 );
   let answer = num0 * num1 * num2;
@@ -38,6 +44,8 @@ console.log( multiplyThree(1,2,2) );
 
 // 5. Function that will return true if a number is positive,
 //    or greater than zero, and false otherwise
+console.log('**** 5. Function to Check For Positive Numbers ****')
+
 function isPositive( number ) {
   console.log( 'in isPositive:', number );
   if ( number > 0 ){
@@ -48,13 +56,14 @@ function isPositive( number ) {
 }
 // Call the function to test each outcome (true & false)
 // Write a separate console.log statement for each outcome
-console.log( 'isPositive - should say true', isPositive(3) );
-console.log( 'isPositive - should say false', isPositive(0) );
-console.log( 'isPositive - should say false', isPositive(-3) );
+console.log( 'isPositive - should say true:', isPositive(3) );
+console.log( 'isPositive - should say false:', isPositive(0) );
+console.log( 'isPositive - should say false:', isPositive(-3) );
 
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
+console.log('**** 6. Function To Return Last Item in favoriteSports Array ****')
 
 let favoriteSports=['golf', 'cycling', 'tennis'];
 
@@ -63,11 +72,15 @@ function getLast( array ) {
   let _last_item = array[array.length -1];
   return _last_item;
 }
+
 console.log( getLast(favoriteSports) );
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
+console.log('**** 7. Function To Check favoriteSports Array For Sports ****')
+
+
 function find(array, value){
   console.log( 'in find:', value, array );
   for (i=0; i < favoriteSports.length; i++){
@@ -79,7 +92,8 @@ function find(array, value){
 }
 }
 
-console.log( find(favoriteSports, 'golf') );
+console.log( 'Will print true if golf is a favorite sports:', find(favoriteSports, 'golf') );
+console.log( 'Should print false because soccor is not a favorite sport:', find(favoriteSports, 'Soccor') );
 
 // ----------------------
 // Stretch Goals
