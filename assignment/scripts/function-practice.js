@@ -155,6 +155,10 @@ let newNums = [-15,-14,-16,-12,-11,-10,4,6]
 console.log( 'here is an array of new nembers:', newNums);
 console.log( 'array of all positive numbers:', posNums(newNums) );
 
+let negNums = [-15,-14,-16,-12,-11,-10]
+console.log( 'here is an array of negative nembers:', negNums);
+console.log( 'empty array:', posNums(negNums) );
+
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
