@@ -105,11 +105,20 @@ console.log( 'Should print false because soccor is not a favorite sport:', find(
 // ----------------------
 // 8. Function to check if a letter is the first letter in a
 //    string. Return true if it is, and false otherwise
-function isFirstLetter(letter, string) {
+console.log('**** 8. Function to Check Strings ****')
 
+function isFirstLetter(letter, string) {
+  console.log( 'in isFirstLetter:', letter, string );
+  if ( string.indexOf(letter) === 0 ){
+    return true;
+  } else {
+    return false;
+  }
 }
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
+console.log( 'isFirstLetter - should say true', isFirstLetter('j', 'javascript') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
+console.log( 'isFirstLetter - should say false', isFirstLetter('f', 'mathematics') );
 
 // 9. Function to return the sum of all numbers in an array
 console.log('**** 9. Sum of All Numbers In Array ****')
@@ -162,3 +171,23 @@ console.log( 'empty array:', posNums(negNums) );
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
+console.log( '**** 11. Edabit Challenge! ****' );
+
+// Given two numbers, return true if the sum of both numbers is less than 100. Otherwise return false.
+// To complete this problem, i create a function underOneHund with two parameters, num1 and num2.
+// In the function body i write a console.log to alert me that the function is running and which arguements it took.
+// I create a variable 'sum' and assign it to be equal to the sum of num1 & num2.
+// A condtional statement checks if summ is less than 100. If it is, the function will output true. Otherwise, the function will output false.
+
+function underOneHund( num1, num2 ){
+  console.log( 'in underOneHund:', num1, num2 );
+  let sum = num1 + num2;
+  if ( sum < 100 ){
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log ( '50+44 is equal to 94, so this should return true:', underOneHund(50,44) );
+console.log ( '180+180 is equal to 360, so this should return false:', underOneHund(180,180) );
