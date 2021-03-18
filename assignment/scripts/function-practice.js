@@ -88,7 +88,7 @@ console.log('**** 7. Function To Check favoriteSports Array For Sports ****')
 
 function find(array, value){
   console.log( 'in find:', value, array );
-  for (i=0; i < favoriteSports.length; i++){
+  for (let i=0; i < favoriteSports.length; i++){
     if ( value === favoriteSports[i] ){
       return true;
     } else {
@@ -127,7 +127,7 @@ function sumAll( numbersArray ) {
   console.log( 'in sumAll', numbersArray );
   let sum = 0
   // TODO: loop to add items
-  for (i=0; i < numbersArray.length; i++){
+  for (let i=0; i < numbersArray.length; i++){
     sum += numbersArray[i];
   }
   return sum;
@@ -148,9 +148,9 @@ console.log('**** 10. Function to Return a New Array of All Positive Numbers ***
 function posNums ( array ) {
   console.log( 'in posNums:', array );
   let posArray = [];
-  for (i=0; i<array.length; i++) {
+  for (let i=0; i<array.length; i++) {
     if ( array[i] > 0 ) {
-      posArray.push(array[i]);
+      posArray.push( array[i] );
     }
   }
   return posArray;
@@ -166,7 +166,7 @@ console.log( 'array of all positive numbers:', posNums(newNums) );
 
 let negNums = [-15,-14,-16,-12,-11,-10]
 console.log( 'here is an array of negative nembers:', negNums);
-console.log( 'empty array:', posNums(negNums) );
+console.log( 'all numbers in this array are negative so here is an empty array:', posNums(negNums) );
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
@@ -174,11 +174,6 @@ console.log( 'empty array:', posNums(negNums) );
 console.log( '**** 11. Edabit Challenge! ****' );
 
 // Given two numbers, return true if the sum of both numbers is less than 100. Otherwise return false.
-// To complete this problem, i create a function underOneHund with two parameters, num1 and num2.
-// In the function body i write a console.log to alert me that the function is running and which arguements it took.
-// I create a variable 'sum' and assign it to be equal to the sum of num1 & num2.
-// A condtional statement checks if summ is less than 100. If it is, the function will output true. Otherwise, the function will output false.
-
 function underOneHund( num1, num2 ){
   console.log( 'in underOneHund:', num1, num2 );
   let sum = num1 + num2;
